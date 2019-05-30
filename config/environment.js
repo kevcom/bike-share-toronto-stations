@@ -2,7 +2,7 @@
 
 module.exports = function(environment) {
   let ENV = {
-    modulePrefix: 'zoocasa-ember',
+    modulePrefix: 'bike-share-toronto-stations',
     environment,
     rootURL: '/',
     locationType: 'auto',
