@@ -1,0 +1,31 @@
+school-card {
+	display: block;
+	border: 1px solid #eee;
+	box-shadow: 2px 2px 2px #ddd;
+	flex: 1;
+	margin: 0 0.75rem;
+	border-radius: 4px;
+}
+
+school-card hr {
+	border: 1px solid #eee;
+}
+
+school-card .school-map {
+	height: 200px;
+	width: 100%;
+}
+
+school-card .school-info {
+	padding: 0.9rem;
+	display: block;
+	text-align: left;
+}
+
+school-card .school-info-name {
+	margin-bottom: 0.6rem;
+}
+
+school-card .school-info-name h4 {
+	margin-bottom: 0.3rem;
+}

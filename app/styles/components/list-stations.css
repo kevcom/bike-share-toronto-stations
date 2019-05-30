@@ -1,0 +1,29 @@
+featured-schools {
+	margin-top: var(--section-margin-top);
+	text-align: center;
+	display: block
+}
+
+featured-schools .carousel {
+	display: flex;
+	align-items: center;
+}
+
+featured-schools .carousel-track {
+	display: flex;
+	flex: 1;
+	flex-wrap: wrap;
+}
+
+featured-schools h2 {
+	margin-bottom: var(--h2-margin-bottom);
+}
+
+featured-schools .carousel-control {
+	margin: 0 0.25rem;
+}
+
+featured-schools .carousel-control img {
+	width: 2rem;
+	height: 2rem;
+}

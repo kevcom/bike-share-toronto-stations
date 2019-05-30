@@ -1,0 +1,22 @@
+/* reset.css from https://gist.github.com/DavidWells/18e73022e723037a50d6 */
+@import "reset.css";
+
+@import "typography.css";
+
+@import "components/featured-schools.css";
+@import "components/school-card.css";
+@import "components/title-and-description.css";
+@import "components/features-section.css";
+
+:root {
+  --section-margin-bottom: 3rem;
+  --section-margin-top: 3rem;
+  --h2-margin-bottom: 2rem;
+}
+
+.layout-container {
+	max-width: 1024px;
+	margin: 0 auto;
+	padding: 2rem;
+	margin-bottom: var(--section-margin-bottom);
+}

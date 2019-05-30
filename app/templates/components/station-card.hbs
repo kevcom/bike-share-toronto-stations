@@ -1,0 +1,12 @@
+{{!-- Google Maps gets instantiated into this element --}}
+<div class="station-map"></div>
+
+<a class="station-info" href={{school.slug}}>
+	<div class="station-info-name">
+		<h4>{{station.name}}</h4>
+		<h5 class="card">{{station.address}}</h5>
+	</div>
+	<p class="small">{{station.stationId}} | {{station.physicalConfiguration}}</p>
+	<hr />
+	<p class="smaller greyed">Toronto Bike Share</p>
+</a>

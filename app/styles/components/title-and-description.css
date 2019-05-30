@@ -1,0 +1,9 @@
+title-and-description {
+	text-align: center;
+	margin-top: var(--section-margin-top);
+	display: block;
+}
+
+title-and-description h2 {
+	margin-bottom: var(--h2-margin-bottom);
+}
