@@ -1,4 +1,4 @@
-school-card {
+station-card {
 	display: block;
 	border: 1px solid #eee;
 	box-shadow: 2px 2px 2px #ddd;
@@ -7,25 +7,25 @@ school-card {
 	border-radius: 4px;
 }
 
-school-card hr {
+station-card hr {
 	border: 1px solid #eee;
 }
 
-school-card .school-map {
+station-card .station-map {
 	height: 200px;
 	width: 100%;
 }
 
-school-card .school-info {
+station-card .station-info {
 	padding: 0.9rem;
 	display: block;
 	text-align: left;
 }
 
-school-card .school-info-name {
+station-card .station-info-name {
 	margin-bottom: 0.6rem;
 }
 
-school-card .school-info-name h4 {
+station-card .station-info-name h4 {
 	margin-bottom: 0.3rem;
 }

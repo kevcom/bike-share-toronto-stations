@@ -4,7 +4,7 @@ import { inject as service } from '@ember/service';
 
 export default Component.extend({
 
-    tagName: 'school-card',
+    tagName: 'station-card',
 
     mapService: service('google-map'),
 
@@ -15,30 +15,32 @@ export default Component.extend({
     },
 
     initMap() {
-        const school = this.school;
+        const station = this.station;
 
-        const center = {lat: school.latitude, lng: school.longitude};
+        console.log(station);
+
+        const center = {lat: station.lat, lng: station.lon};
         const options = {
-            zoom: 11,
+            zoom: 15,
             center: center,
             disableDefaultUI: true
         }
 
-        const mapSelector = `#${this.elementId} > .school-map`;
+        const mapSelector = `#${this.elementId} > .station-map`;
         const element = document.querySelector(mapSelector);
 
         // create new Google Map using mapService
         this.mapService.createNewMap(element, options);
 
-        // add marker at center of map (using coords of school)
+        // add marker at center of map (using coords of station)
         this.mapService.addMarker(center);
 
         // draw boundaries on map (sometimes two, for elementary and secondary)
-        this.drawBoundariesOnMap();
+        //this.drawBoundariesOnMap();
     },
 
     drawBoundariesOnMap() {
-        const school = this.school;
+        const school = this.station;
 
         // iterate through secondary or elementary or both level boundaries
         for (let level in school.boundaries) {

@@ -9,20 +9,23 @@ export default Mixin.create({
 
 		return response.json();
 	},
+
+	async _getStationsList() {
+		const response = await this._fetchData();
+		const stationsList = response.data.stations;
+
+		return stationsList;
+	},
 	
 	async query(store, type, query) {
-		const response = await this._fetchData();
-
-		const stations = response.data.stations;
+		const stations = await this._getStationsList();
 
 		const sliced = stations.slice(query.start || 0, query.limit);
 		return sliced;
 	},
 
 	async findRecord(store, type, id) {
-		const response = await this._fetchData();
-
-		const stations = response.data.stations;
+		const stations = await this._getStationsList();
 
 		const station = stations.filter(station => {
 			return station.station_id == id;
