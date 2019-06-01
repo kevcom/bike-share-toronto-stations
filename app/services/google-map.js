@@ -13,10 +13,15 @@ export default Service.extend({
 		this._mapInstance = mapInstance;
 	},
 
-	addMarker(position) {
+	addMarker(position, icon) {
 		const options = {
 			position: position,
-			icon: 'images/school-pin.svg',
+			icon: {
+				url: icon.url,
+				scaledSize: new this._googleMaps.Size(...icon.scaledSize),
+	            origin: new this._googleMaps.Point(...icon.origin),
+	            anchor: new this._googleMaps.Point(...icon.anchor)
+			},
 			map: this._mapInstance
 		}
 		new this._googleMaps.Marker(options);
